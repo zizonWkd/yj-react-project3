@@ -1,10 +1,8 @@
 import {
   Box,
-  Button,
   Grid,
   HStack,
   Image,
-  Skeleton,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -54,7 +52,7 @@ export default function Home() {
             },[]);
   const { data, isLoading } = useQuery("repoData", comicsList);
   console.log("로딩 : ", isLoading, "코믹데이터 : ", data);
-  const { data: eventsData, isLoading: eventsIsLoading } = useQuery(
+  const { data: eventsData} = useQuery(
     "eventsData",
     eventsList
   );
